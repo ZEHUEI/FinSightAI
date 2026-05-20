@@ -1,43 +1,100 @@
-📊 FinSight AI — Intelligent Portfolio & News Sentiment Engine
+# 📊 FinSight AI — Intelligent Portfolio & News Sentiment Engine
 
-FinSight AI is an AI-powered financial analytics platform that helps users monitor stock portfolios, analyze market sentiment from real-time financial news, and receive automated risk insights. It combines modern full-stack engineering with NLP/LLM-based intelligence to simulate institutional-grade portfolio awareness.
+FinSight AI is an AI-powered financial analytics platform that analyzes stock portfolios using real-time news sentiment and generates automated risk insights. It combines full-stack development, NLP/LLM models, and cloud deployment to simulate a production-grade financial intelligence system.
 
-🚀 Key Features
-📁 Portfolio Dashboard
-Add and manage a list of stock tickers or mock assets
-View structured portfolio overview
-Responsive UI for desktop and mobile
-🧠 AI Market Sentiment Engine
-Python-based background worker fetches recent financial news headlines
-Uses NLP models (e.g., FinBERT or LLM APIs) to generate sentiment scores
-Aggregates sentiment per stock/ticker
-⚠️ Risk Alert System
-AI-generated explanations of portfolio risk exposure
-Summarises negative/positive news impact
-Provides actionable insights in natural language
-📈 Insightful Analytics
-Sentiment trends over time
-Portfolio-level risk scoring
-Cached historical news sentiment for performance optimisation
-🏗️ Tech Stack
-Frontend
-React.js
-Material UI (MUI)
-Responsive design (mobile-first dashboard layout)
-Data visualisation (charts / tables / cards)
-Backend
-Python
-FastAPI (REST API layer)
-Background workers for news scraping & AI processing
-Database
-MongoDB
-PyMongo / Beanie ODM
-Stores:
-Portfolio data
-Cached news articles
-Sentiment history
-Risk reports
-AI / NLP Layer
-Hugging Face Transformers (FinBERT or similar financial model)
-Optional LLM API integration (for summarisation & risk explanation)
-Structured JSON output generation for downstream frontend use
+---
+
+## 🚀 Features
+
+### 📁 Portfolio Dashboard
+- Add stock tickers or mock assets
+- View portfolio overview in a clean, responsive UI
+- Track sentiment per asset in real time
+
+### 🧠 AI Sentiment Analysis
+- Fetches latest financial news for each ticker
+- Uses NLP models (e.g. FinBERT / Hugging Face Transformers)
+- Generates sentiment scores (positive / neutral / negative)
+
+### ⚠️ Risk Insight Engine
+- AI-generated explanations of portfolio risk
+- Summarises why assets may be affected based on news
+- Produces structured JSON risk reports
+
+### 📈 Analytics Dashboard
+- Sentiment trends over time
+- Portfolio-level risk scoring
+- Cached historical news analysis for performance efficiency
+
+---
+
+## 🏗️ Tech Stack
+
+### Frontend
+- React.js
+- Material UI (MUI)
+- Responsive dashboard design
+- Charts / tables for analytics
+
+### Backend
+- Python
+- FastAPI
+- Background workers for news scraping & AI processing
+
+### Database
+- MongoDB
+- PyMongo / Beanie ODM
+- Stores:
+  - Portfolio data
+  - News cache
+  - Sentiment history
+  - Risk reports
+
+### AI Layer
+- Hugging Face Transformers (FinBERT or similar financial NLP model)
+- Optional LLM API for summarisation
+- Structured JSON outputs for frontend integration
+
+---
+
+## 🏗️ System Architecture
+React Frontend
+↓
+FastAPI Backend
+↓
+MongoDB Database
+↓
+AI Sentiment Worker
+↓
+Financial News Sources / APIs
+
+---
+
+
+---
+
+## 🔄 Workflow
+
+1. User inputs stock tickers into portfolio
+2. Backend fetches recent financial news per ticker
+3. AI model performs sentiment analysis on headlines
+4. Sentiment scores are aggregated per stock
+5. LLM generates portfolio risk explanation
+6. Dashboard displays insights and alerts
+
+---
+
+## ☁️ Deployment (Optional Bonus)
+
+### Frontend Hosting
+- AWS S3 static hosting
+- CloudFront CDN for fast delivery
+
+### Backend
+- Dockerized FastAPI service
+- Deployable to AWS ECS / EC2
+
+### Infrastructure as Code
+- Terraform used to provision:
+  - S3 bucket
+  - CloudFront distribution
