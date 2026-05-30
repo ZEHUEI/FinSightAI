@@ -1,5 +1,6 @@
 import React from "react";
 import { useMediaQuery } from "react-responsive";
+import MuiTypography from "./MuiTypography";
 
 const DesktopDetailedGrid = () => (
   <div>
@@ -78,6 +79,9 @@ const Page = () => {
     <div className="p-6 text-white bg-[#000000] min-h-screen">
       <h1 className="text-2xl font-bold mb-4">Porfolio Manager</h1>
       {isMobile ? <MobileCompactView /> : <DesktopDetailedGrid />}
+
+      {/*Practtive */}
+      <MuiTypography />
     </div>
   );
 };
