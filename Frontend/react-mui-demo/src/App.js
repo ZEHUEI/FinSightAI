@@ -2,7 +2,7 @@ import Page from "./Components/Page";
 
 function App() {
   return (
-    <div className="bg-black min-h-screen flex items-center justify-center">
+    <div className="min-h-screen w-full">
       <Page />
     </div>
   );
