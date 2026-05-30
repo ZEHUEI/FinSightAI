@@ -1,4 +1,5 @@
 import Page from "./Components/Page";
+import { Analytics } from "@vercel/analytics/next";
 
 function App() {
   return (
